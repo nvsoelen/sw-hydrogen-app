@@ -1,6 +1,7 @@
 import {useShopQuery, gql, Seo} from '@shopify/hydrogen';
 import Collections from '../components/Collections.server';
-import TrendingProducts from '../components/TrendingProducts.server'
+import TrendingProducts from '../components/TrendingProducts.server';
+import Footer from '../components/Footer.server'
 
 export default function Home() {
 
@@ -48,7 +49,7 @@ export default function Home() {
                 href="#"
                 className="inline-block rounded-md border border-transparent bg-indigo-600 py-3 px-8 font-medium text-white hover:bg-indigo-700"
               >
-                Shop Collection
+                Bakkers klaar? Bakken maar!
               </a>
             </div>
           </div>
@@ -58,13 +59,14 @@ export default function Home() {
       </div>
       <TrendingProducts />
 
+      <Footer />
     </>
   ) 
 }
 
 const HOME_QUERY = gql`
   query ShopInfo {
-    page(id:"gid://shopify/Page/92617605276") {
+    page(id:"gid://shopify/Page/86308356181") {
       title
       metafield(namespace: "custom" key: "banner")	{
         reference {
